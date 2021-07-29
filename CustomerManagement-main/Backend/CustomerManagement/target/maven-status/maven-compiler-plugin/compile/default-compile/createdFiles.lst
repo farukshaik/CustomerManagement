@@ -1,0 +1,6 @@
+com/jocata/customermanagement/CustomerManagementApplication.class
+com/jocata/customermanagement/service/LoginService.class
+com/jocata/customermanagement/repository/LoginRepository.class
+com/jocata/customermanagement/model/Login.class
+com/jocata/customermanagement/entity/LoginEntity.class
+com/jocata/customermanagement/controller/LoginController.class
