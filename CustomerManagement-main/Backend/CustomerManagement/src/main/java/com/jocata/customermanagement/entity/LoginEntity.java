@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name="tbl_user_login")
+@Table(name="tbl_login")
 public class LoginEntity {
 
 	@Id

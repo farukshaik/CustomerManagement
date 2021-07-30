@@ -1,0 +1,24 @@
+.header1{
+    background-color: rgb(216, 245, 245);
+    border-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 80px;
+}
+.texter{
+text-decoration-color: cornsilk;
+font-size: xx-large; 
+font-family: 'Times New Roman', Times, serif;
+font-variant:normal ; 
+font-weight: bold; 
+color: #9b9090;
+}
+button{
+    background: rgb(212, 28, 59);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.back-button{
+    padding-right: 100px;
+}

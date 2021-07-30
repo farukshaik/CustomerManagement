@@ -1,0 +1,30 @@
+<div class ="mat-elevation-z8" style="text-align:center">
+    <h1 class="texter">
+      ADMIN DASHBOARD
+    </h1>
+
+<div>
+<div>
+    <button class ="menu"  mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="Home()">Client List</button>
+    <button mat-menu-item (click)="new()">Add Client</button>
+  </mat-menu>
+<p>
+    <button class ="button1" mat-fab (click)="logout()">Logout</button>
+  </p>
+</div>
+</div>
+</div>
+<div class="header1">
+  <ag-grid-angular
+  style="width: 1500px; height: 500px;"
+  class="ag-theme-alpine"
+  [rowData]="rowData | async"
+  [columnDefs]="columnDefs"
+  [pagination]="true"
+  [paginationPageSize]=5
+  [animateRows]="true"
+>
+</ag-grid-angular>
+</div>
