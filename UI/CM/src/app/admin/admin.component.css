@@ -1,3 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+table {
+    width: 1515px;
+    margin-left:2px;
+    margin-right:10px;
+
+    height: relative;
+   
+  }
+
+  .mat-elevation-z8{
+    background-color: rgb(128, 170, 204);
+    padding-bottom: 10px;
+
+}
+
+
+.text{
+    color:white;
+    margin-top:20px;
+}
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .homebutton{
+    margin-left: 1100px;
+    margin-top: 20px;
+   }
+   
+   .home{
+     background-color: red
+   }
 
 button{
     background: rgb(216, 224, 230);
@@ -10,16 +43,11 @@ button{
     margin-right: 1500px;
     background-color: brown;
     color: cornsilk;
-    margin-left: 10px;
-}
-.mat-elevation-z8{
-    background-color: rgb(128, 170, 204);
-    padding-bottom: 20px;
 }
 .header1{
    
- margin-left: 10px;
- margin-bottom: 100px;
+ margin-left: 400px;
+ margin-bottom: 50px;
  padding-bottom: 50px;
 }
 .mat-elevation-z8{
@@ -27,10 +55,10 @@ button{
     padding-bottom: 20px;
 }
 .button1{
-    margin-left: 1400px;
+    margin-left: 1500px;
 }
 .button2{
-    margin-left: 100px;
+    margin-left: 10px;
 }
 .button3{
     margin-left: 10px;
@@ -42,5 +70,9 @@ button{
     font-weight: bolder;
 }
 .buttons{
-    padding-right:10px;
+    padding-right:1400px;
+}
+.button-pos{
+    padding-right:1500px;
+    padding-top: 50px;
 }

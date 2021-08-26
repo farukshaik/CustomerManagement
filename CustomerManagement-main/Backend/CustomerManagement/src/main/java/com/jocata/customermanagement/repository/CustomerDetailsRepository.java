@@ -15,5 +15,11 @@ public interface CustomerDetailsRepository extends JpaRepository<CustomerDetails
 
 	Optional<CustomerDetails> findByaadharNumber(String customerAadhar);
 	// Optional<CustomerDetails> findByPanNumber(String customerPan);
+	
+	public CustomerDetails findByAadharNumber(String aadharNumber);
 
+	public CustomerDetails findByPanNumber(String panNumber);
+	
+	
+	public CustomerDetails findByCustomerId(Integer customerId);
 }

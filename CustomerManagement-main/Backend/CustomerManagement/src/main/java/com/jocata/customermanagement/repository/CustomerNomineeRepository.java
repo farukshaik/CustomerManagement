@@ -7,4 +7,6 @@ import com.jocata.customermanagement.entity.CustomerNominee;
 
 @Repository
 public interface CustomerNomineeRepository extends JpaRepository<CustomerNominee, Integer> {
+	
+	public CustomerNominee findByCustId(Integer custId);
 }

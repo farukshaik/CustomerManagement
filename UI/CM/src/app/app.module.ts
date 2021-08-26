@@ -13,10 +13,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { AgGridModule } from 'ag-grid-angular';
-import { FormsComponent } from './forms/forms.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatFormField} from '@angular/material/form-field'
 import{MatInput, MatInputModule}from '@angular/material/input';
 import { MatOption } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
 import{MatTabsModule} from'@angular/material/tabs';
 import{MatMenuModule} from '@angular/material/menu';
 import{matMenuAnimations} from '@angular/material/menu';
@@ -24,6 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCalendarView} from '@angular/material/datepicker/calendar';
 import {MatSelectModule} from '@angular/material/select';
+import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { UpdatedetailsComponent } from './updatedetails/updatedetails.component'
 
 
 @NgModule({
@@ -32,7 +37,8 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     AdminComponent,
     UserTableComponent,
-    FormsComponent,
+    CustomerdetailsComponent,
+    UpdatedetailsComponent
     
   ],
   imports: [
@@ -45,19 +51,22 @@ import {MatSelectModule} from '@angular/material/select';
     MatSortModule,
     MatPaginatorModule,
     MatTabsModule,
+    MatRadioModule,
+    MatIconModule,
     AgGridModule.withComponents([]),
     MatButtonModule,
+    MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
     MatMenuModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
-  
+    
   
   ],
-  exports:[MatSortModule,MatInput,  ],
-  providers: [UserService],
+  exports:[],
+  providers: [UserService, CustomerdetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

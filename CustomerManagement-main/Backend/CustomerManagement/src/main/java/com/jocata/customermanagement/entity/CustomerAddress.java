@@ -17,16 +17,9 @@ public class CustomerAddress {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "customer_id")
 	private Integer customerId;
-	public String getAadharNumber() {
-		return aadharNumber;
-	}
-
-	public void setAadharNumber(String aadharNumber) {
-		this.aadharNumber = aadharNumber;
-	}
-
-	@Column(name = "aadhar")
-	private String aadharNumber;
+	
+	@Column(name="cust_id")
+	private Integer custId;
 
 	@Column(name = "country")
 	private String customerCountry;
@@ -45,6 +38,16 @@ public class CustomerAddress {
 
 	public void setCustomerCountry(String customerCountry) {
 		this.customerCountry = customerCountry;
+	}
+	
+	
+
+	public Integer getCustId() {
+		return custId;
+	}
+
+	public void setCustId(Integer custId) {
+		this.custId = custId;
 	}
 
 	public Integer getCustomerPinCode() {

@@ -1,0 +1,31 @@
+.homebutton{
+    margin-left: 1200px;
+   margin-top:20px;
+   }
+
+   .mat-elevation-z8{
+    background-color: rgb(128, 170, 204);
+    padding-bottom: 10px;
+
+}
+
+.text{
+margin-top:10px;
+  color:white;
+}
+   .example-full-width {
+    width: 20%;
+    margin-left:10px;
+    margin-right:50px;
+    margin-bottom: 19px;
+  }
+
+  .buttonpos2 {
+    
+    padding-top: inherit;
+    padding-left: 1220px;
+    left:0;
+    margin-right:15px;
+    padding-bottom: 10px;
+  }
+  

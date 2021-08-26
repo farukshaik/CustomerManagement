@@ -19,8 +19,8 @@ public class CustomerOccupation {
 	@Column(name = "employee_id")
 	private Integer employeeId;
 
-	@Column(name = "aadhar")
-	private String aadharNumber;
+	@Column(name = "cust_id")
+	private Integer custId;
 
 	
 	@Column(name = "company_name")
@@ -100,12 +100,16 @@ public class CustomerOccupation {
 		return country;
 	}
 
-	public String getAadharNumber() {
-		return aadharNumber;
+	
+
+	
+
+	public Integer getCustId() {
+		return custId;
 	}
 
-	public void setAadharNumber(String aadharNumber) {
-		this.aadharNumber = aadharNumber;
+	public void setCustId(Integer custId) {
+		this.custId = custId;
 	}
 
 	public void setCountry(String country) {

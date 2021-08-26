@@ -9,6 +9,7 @@ import com.jocata.customermanagement.entity.FetchCustomerDetailsEntity;
 
 @Repository
 public interface FetchCustomerDetailsRepository extends JpaRepository<FetchCustomerDetailsEntity, Integer> {
+	
 	public List<FetchCustomerDetailsEntity> findAll();
 
 	// public List<FetchCustomerDetailsEntity> findByAadharNumber(String aadhar);

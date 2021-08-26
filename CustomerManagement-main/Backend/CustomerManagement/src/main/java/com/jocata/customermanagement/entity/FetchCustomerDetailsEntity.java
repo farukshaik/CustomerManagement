@@ -16,8 +16,8 @@ public class FetchCustomerDetailsEntity {
 	@Column(name = "customer_id")
 	private int customerId;
 
-	@Column(name = "account_number")
-	private int accountNumber;
+	@Column(name = "customer_cif_code")
+	private int cifNumber;
 
 	@Column(name = "last_name")
 	private String lastName;
@@ -45,12 +45,14 @@ public class FetchCustomerDetailsEntity {
 		this.customerId = customerId;
 	}
 
-	public int getAccountNumber() {
-		return accountNumber;
+	
+
+	public int getCifNumber() {
+		return cifNumber;
 	}
 
-	public void setAccountNumber(int accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setCifNumber(int cifNumber) {
+		this.cifNumber = cifNumber;
 	}
 
 	public String getMartialStatus() {
@@ -135,7 +137,6 @@ public class FetchCustomerDetailsEntity {
 		this.gender = gender;
 	}
 
-	
 	public String getDate_of_birth() {
 		return date_of_birth;
 	}

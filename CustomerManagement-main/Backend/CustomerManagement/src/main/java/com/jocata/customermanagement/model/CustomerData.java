@@ -6,7 +6,7 @@ public class CustomerData {
 
 	// customer details
 	private Integer customerId;
-	private Long accountNumber;
+	private Integer cifNumber;
 	private String firstName;
 	private String lastName;
 	private Date dateOfBirth;
@@ -35,20 +35,89 @@ public class CustomerData {
 	private String address;
 	private String state;
 	private String country;
-	private Integer pincode;
+	private Integer pinCode;
 
 	// customer nominee
 	private String nomineeName;
 	private String relationship;
 	private String mobileNumber;
 
-	public Integer getCustomerId() {
-		return customerId;
+	// account details
+	private String productType;
+	private String accountStatus;
+	private String branch;
+	private String riskLevel;
+	private Integer accountBalance;
+	private Integer accountTurnOver;
+	private Integer cashTurnOver;
+	private String purposeOfAccount;
+	private Long accountNumber;
+
+	public String getProductType() {
+		return productType;
 	}
 
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
+	public void setProductType(String productType) {
+		this.productType = productType;
 	}
+
+	public String getAccountStatus() {
+		return accountStatus;
+	}
+
+	public void setAccountStatus(String accountStatus) {
+		this.accountStatus = accountStatus;
+	}
+
+	public String getBranch() {
+		return branch;
+	}
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+	public String getRiskLevel() {
+		return riskLevel;
+	}
+
+	public void setRiskLevel(String riskLevel) {
+		this.riskLevel = riskLevel;
+	}
+
+	public Integer getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(Integer accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+	public Integer getAccountTurnOver() {
+		return accountTurnOver;
+	}
+
+	public void setAccountTurnOver(Integer accountTurnOver) {
+		this.accountTurnOver = accountTurnOver;
+	}
+
+	public Integer getCashTurnOver() {
+		return cashTurnOver;
+	}
+
+	public void setCashTurnOver(Integer cashTurnOver) {
+		this.cashTurnOver = cashTurnOver;
+	}
+
+	public String getPurposeOfAccount() {
+		return purposeOfAccount;
+	}
+
+	public void setPurposeOfAccount(String purposeOfAccount) {
+		this.purposeOfAccount = purposeOfAccount;
+	}
+
+	
 
 	public Long getAccountNumber() {
 		return accountNumber;
@@ -58,8 +127,38 @@ public class CustomerData {
 		this.accountNumber = accountNumber;
 	}
 
+	public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Integer customerId) {
+		this.customerId = customerId;
+	}
+
+	public Integer getCifNumber() {
+		return cifNumber;
+	}
+
+	public void setCifNumber(Integer cifNumber) {
+		this.cifNumber = cifNumber;
+	}
+
+	public String getMaritalStatus() {
+		return maritalStatus;
+	}
+
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+
+	
+
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public Integer getPinCode() {
+		return pinCode;
 	}
 
 	public void setFirstName(String firstName) {
@@ -120,6 +219,15 @@ public class CustomerData {
 
 	public void setMotherName(String motherName) {
 		this.motherName = motherName;
+	}
+	
+	
+	
+	
+	
+
+	public void setPinCode(Integer pinCode) {
+		this.pinCode = pinCode;
 	}
 
 	public String getAadharNumber() {
@@ -250,13 +358,7 @@ public class CustomerData {
 		this.country = country;
 	}
 
-	public Integer getPincode() {
-		return pincode;
-	}
-
-	public void setPinCode(Integer pincode) {
-		this.pincode = pincode;
-	}
+	
 
 	public String getNomineeName() {
 		return nomineeName;

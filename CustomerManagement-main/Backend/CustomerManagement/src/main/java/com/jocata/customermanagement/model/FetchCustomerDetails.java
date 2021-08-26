@@ -3,11 +3,23 @@ package com.jocata.customermanagement.model;
 public class FetchCustomerDetails {
 
 	private int customerId;
-	private int accountNumber;
+	private Integer cifNumber;
+	private Long accountNumber;
+    //private String branch;
 	private String firstName;
 	private String lastName;
 	private String dateOfBirth;
 	private String gender;
+	
+	
+	
+	public Long getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	
 	private String aadharNumber;
 	private String panNumber;
 	private String mobileNumber;
@@ -23,11 +35,12 @@ public class FetchCustomerDetails {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
-	public int getAccountNumber() {
-		return accountNumber;
+	
+	public Integer getCifNumber() {
+		return cifNumber;
 	}
-	public void setAccountNumber(int accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setCifNumber(Integer cifNumber) {
+		this.cifNumber = cifNumber;
 	}
 	public String getFirstName() {
 		return firstName;

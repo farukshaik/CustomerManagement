@@ -1,0 +1,288 @@
+  
+<div >
+<mat-toolbar class= "mat-elevation-z8">
+      <span class = "text">Customer Details</span>
+    <div class = "homebutton">
+      <button (click) = "onHome()" mat-icon-button color="accent" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon> 
+      </button>
+  </div>
+  </mat-toolbar>
+  </div>
+
+  <div></div>
+ 
+    <mat-tab-group #tabGroup>
+
+      <mat-tab id="personal" label="Personal Details"><br><br>
+ <form #userprofileForm="ngForm" (ngSubmit)="onProfile()">     
+  <div class="tabs">
+        <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input class="form-control" type="text" pattern="[a-zA-Z].{3,}"    id = "firstName" name="firstName" [(ngModel)] = "profile.firstName"  #firstName="ngModel" matInput>
+            </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input class="form-control" type="text" pattern ="[a-zA-Z].{1,}" id = "lastName" name="lastName" [(ngModel)] = "profile.lastName"  #lastName="ngModel"  matInput>
+          </mat-form-field> 
+    
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>DOB[--/--/----]</mat-label>
+            <input class="form-control" type="text" id = "dateOfBirth" name="dateOfBirth" [(ngModel)] = "profile.dateOfBirth"  #dateOfBirth="ngModel"  matInput >
+          </mat-form-field><br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Gender</mat-label>
+            <input class="form-control" type="text" pattern="[a-zA-Z].{3,}" id = "gender" name="gender" [(ngModel)] = "profile.gender"  #gender="ngModel"  matInput >
+          </mat-form-field>  
+          <mat-form-field class="example-full-width1" appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com"class="form-control" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id = "emailId" name="emailId" [(ngModel)] = "profile.emailId"  #emailId="ngModel" matInput >
+            <!--<mat-error *ngIf="profile.emailId.invalid">{{getErrorMessage()}}</mat-error>-->
+          </mat-form-field><br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>MaritalStatus</mat-label>
+            <input class="form-control" type="text" pattern="[a-zA-Z].{4,}"  id = "maritalStatus" name="maritalStatus" [(ngModel)] = "profile.maritalStatus"  #maritalStatus="ngModel"  matInput >
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Father Name</mat-label>
+            <input class="form-control" type="text" pattern="[a-zA-Z].{4,}" id = "fatherName" name="fatherName" [(ngModel)] = "profile.fatherName"  #fatherName="ngModel"  matInput >
+          </mat-form-field>
+        <mat-form-field class="example-full-width"appearance="fill">
+            <mat-label>Mother Name</mat-label>
+            <input class="form-control" type="text" pattern="[a-zA-Z].{4,}" id = "motherName" name="motherName" [(ngModel)] = "profile.motherName"  #motherName="ngModel"  matInput >
+          </mat-form-field><br>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Mobile Number</mat-label>
+            <input class="form-control" type="text" pattern="[0-9]{10}" id = "customerMobileNumber" name="customerMobileNumber" [(ngModel)] = "profile.customerMobileNumber"  #customerMobileNumber="ngModel"  matInput >
+          </mat-form-field>
+        
+          <mat-form-field class="example-full-width"appearance="fill">
+            <mat-label>PAN</mat-label>
+            <input class="form-control" type="text" pattern="[a-zA-Z0-9]{10}" id = "panNumber" name="panNumber" [(ngModel)] = "profile.panNumber"  #panNumber="ngModel"  matInput >
+          </mat-form-field>
+          <mat-form-field class="example-full-width"appearance="fill">
+            <mat-label>AADHAR CARD </mat-label>
+            <input class="form-control" type="text" pattern="[0-9]{12}" id = "aadharNumber" name="aadharNumber" [(ngModel)] = "profile.aadharNumber"  #aadharNumber="ngModel"  matInput >
+          </mat-form-field>
+          
+          <div class="buttonpos2">
+            <button mat-stroked-button color="warn" type="cancel" (click)="cancel()" class="btn btn-outline-danger">Cancel</button>&nbsp; &nbsp; &nbsp;
+            
+            <button mat-raised-button color="primary" type="submit" [disabled]="!userprofileForm.valid" class="btn btn-outline-success" (click)="tabGroup.selectedIndex=1">Save & Continue</button>&nbsp;
+            
+          </div>
+        </div>
+      </form>
+      </mat-tab>
+
+         <mat-tab id="address" label="Address Details"><br><br>
+          <form #addressForm = "ngForm" (ngSubmit)="onAddress()">
+            <div class="tabs">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Pincode</mat-label>
+                <input class="form-control" type="text" pattern="[0-9]{6}" id ="customerPinCode" name="customerPinCode" [(ngModel)] = "customerAddress.customerPinCode"  #customerPinCode="ngModel" matInput >
+              </mat-form-field>
+              
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>state</mat-label>
+                <input class="form-control" type="text" pattern="[a-zA-Z].{2,}" id ="customerState" name="customerState" [(ngModel)] = "customerAddress.customerState"  #customerState="ngModel" matInput >
+              </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>country</mat-label>
+                <input class="form-control" type="text" pattern="[a-zA-Z].{2,}" id ="customerCountry" name="customerCountry" [(ngModel)] = "customerAddress.customerCountry"  #customerCountry="ngModel" matInput >
+              </mat-form-field><br>
+           
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Permanent Address</mat-label>
+                <textarea matInput class="form-control" type="text" id ="permanentAddress" name="permanentAddress" [(ngModel)] = "customerAddress.permanentAddress"  #permanentAddress="ngModel"></textarea>
+              </mat-form-field>
+            
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Current Address</mat-label>
+                <textarea matInput class="form-control" type="text" id ="currentAddress" name="currentAddress" [(ngModel)] = "customerAddress.currentAddress"  #currentAddress="ngModel"></textarea>
+              </mat-form-field> 
+              <div class="buttonpos2">
+                <button mat-stroked-button color="warn" type="cancel" (click)="cancel()" class="btn btn-outline-danger">Cancel</button>&nbsp; &nbsp; &nbsp;
+                
+                <button mat-raised-button color="primary" type="submit" [disabled]="!addressForm.valid" (click)="tabGroup.selectedIndex=2">Save & Continue</button>
+              </div>
+            </div>
+          </form>
+            
+        </mat-tab>
+
+         <mat-tab id="occupation" label="Occupation Details"> <br><br>
+              <form #employeeForm = "ngForm" (ngSubmit)="onEmployee()">
+                <div class="tabs">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>EmployeeID</mat-label>
+                 <input class="form-control" type="text" pattern="[a-zA-Z0-9]{4}" id ="employeeId" name="employeeId" [(ngModel)] = "occupation.employeeId"  #employeeId="ngModel" matInput >
+                  </mat-form-field>
+               
+                  
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>companyname</mat-label>
+                    <input class="form-control" type="text" pattern="[a-zA-Z].{2,}"id = "companyName" name="companyName" [(ngModel)] = "occupation.companyName"  #companyName="ngModel" matInput >
+                  </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Designation</mat-label>
+                    <input class="form-control" type="text" pattern="[a-zA-Z].{2,}"id = "designation" name="designation" [(ngModel)] = "occupation.designation"  #designation="ngModel" matInput >
+                  </mat-form-field> 
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Experience</mat-label>
+                    <input class="form-control" type="text" pattern="[0-9].{0,}" id = "experience" name="experience" [(ngModel)] = "occupation.experience"  #experience="ngModel" matInput >
+                  </mat-form-field>
+                <mat-form-field class="example-full-width"appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput class="form-control" type="text" id = "address" name="address" [(ngModel)] = "occupation.address"  #address="ngModel" matInput ></textarea>
+                  </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>State</mat-label>
+                    <input fclass="form-control" type="text" pattern="[a-zA-Z].{2,}" id = "state" name="state" [(ngModel)] = "occupation.state"  #state="ngModel" matInput >
+                  </mat-form-field> 
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Country</mat-label>
+                    <input class="form-control" type="text"pattern="[a-zA-Z].{2,}"  id = "country" name="country" [(ngModel)] = "occupation.country"  #country="ngModel"matInput >
+                  </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Pincode</mat-label>
+                    <input class="form-control" type="text" pattern="[0-9]{6}" id = "pinCode" name="pinCode" [(ngModel)] = "occupation.pinCode"  #pinCode="ngModel" matInput >
+                  </mat-form-field> 
+                  <div class="buttonpos2">
+                    <button mat-stroked-button color="warn" (click)="cancel()" type="cancel" class="btn btn-outline-danger">Cancel</button>&nbsp; &nbsp; &nbsp;
+                    
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!employeeForm.valid" class="btn btn-outline-success" (click)="tabGroup.selectedIndex=3">Save & Continue</button>
+                  </div>
+                  
+                </div>
+              </form>
+                
+                
+                </mat-tab>
+             
+            <mat-tab id="nominee" label="Nominee Details"> <br>
+              <form #nomineeForm = "ngForm" (ngSubmit)="onSubmit()">
+                <div class="tabs">
+                <mat-form-field class="example-full-width"appearance="fill">
+                    <mat-label>NomineeName</mat-label>
+                    <input class="form-control" type="text" id ="nomineeName" name="nomineeName" [(ngModel)] = "nominee.nomineeName"  #nomineeName="ngModel" matInput >
+                  </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>relationship</mat-label>
+                    <input class="form-control" type="text" id ="relationship" name="relationship" [(ngModel)] = "nominee.relationship"  #relationship="ngModel" matInput>
+                  </mat-form-field> 
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Mobile</mat-label>
+                    <input class="form-control" type="text" pattern="[0-9]{10}"id ="mobileNumber" name="mobileNumber" [(ngModel)] = "nominee.mobileNumber"  #mobileNumber="ngModel" matInput>
+                  </mat-form-field>
+                  <div class="buttonpos2">
+      
+                      <button mat-stroked-button color="warn" (click)="cancel()" type="cancel" class="btn btn-outline-danger">Cancel</button>&nbsp; &nbsp; &nbsp;
+                      
+                      
+                    
+                    <button mat-raised-button color="primary" type="submit" class="btn btn-outline-success"[disabled]="!nomineeForm.valid" (click)="tabGroup.selectedIndex=4">Save & Continue</button>
+                </div>
+                
+              </div>
+            </form>
+          </mat-tab> 
+
+
+          <mat-tab id="product" label="Product Details"> <br>
+            <form #accountDetailsForm = "ngForm" (ngSubmit)="onAccount()">
+    
+              <div class="tabs">
+                <mat-form-field class="example-full-width"appearance="fill">
+                  <mat-label>Product Type</mat-label>
+                    <mat-select class="form-control" type="text" id ="productType" name="productType" [(ngModel)] = "accountDetails.productType"  #productType ="ngModel" matInput>
+                      
+                      <mat-option *ngFor="let productType of productType1" value={{productType.lookupId}}>
+                      
+                        
+                        {{productType.lookupValue}} 
+                      </mat-option>
+                  
+                    </mat-select>
+                    
+                  </mat-form-field>
+                  
+              <mat-form-field class="example-full-width"appearance="fill">
+                <mat-label>Account Status</mat-label>
+                  <mat-select class="form-control" type="text" id ="accountStatus" name="accountStatus" [(ngModel)] = "accountDetails.accountStatus"  #accountStatus="ngModel" matInput>
+                    <mat-option *ngFor="let accountType of accountStatus1" value={{accountType.lookupId}}>
+                      
+                        
+                      {{accountType.lookupValue}} 
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                
+                <mat-form-field class="example-full-width"appearance="fill">
+                  <mat-label>Branch</mat-label>
+                    <mat-select class="form-control" type="text" id ="branch" name="branch" [(ngModel)] = "accountDetails.branch"  #branch="ngModel" matInput >
+                      <mat-option *ngFor="let branch of branch1" value={{branch.lookupId}}>
+                      
+                        
+                        {{branch.lookupValue}} 
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width"appearance="fill">
+                    <mat-label>Risk Level</mat-label>
+                      <mat-select class="form-control" type="text" id ="riskLevel" name="riskLevel" [(ngModel)] = "accountDetails.riskLevel"  #riskLevel="ngModel" matInput >
+                        <mat-option *ngFor="let riskType of riskLevel1" value={{riskType.lookupId}}>
+                      
+                        
+                          {{riskType.lookupValue}} 
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Account Balance</mat-label>
+                  <input class="form-control" type="text" pattern="[0-9].{1,}" id ="accountBalance" name="accountBalance" [(ngModel)] = "accountDetails.accountBalance"  #accountBalance="ngModel" matInput>
+                </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Account Turn Over</mat-label>
+                  <input class="form-control" type="text" id ="accountTurnOver" name="maccountTurnOver" [(ngModel)] = "accountDetails.accountTurnOver"  #accountTurnOver="ngModel" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Cash Turn Over</mat-label>
+                  <input class="form-control" type="text" pattern="[0-9].{1,}" id ="cashTurnOver" name="cashTurnOver" [(ngModel)] = "accountDetails.cashTurnOver"  #cashTurnOver="ngModel" matInput>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Remarks</mat-label>
+                  <textarea matInput class="form-control" type="text" pattern="[0-9].{1,}" id ="purposeOfAccount" name="purposeOfAccount" [(ngModel)] = "accountDetails.purposeOfAccount"  #purposeOfAccount="ngModel"></textarea>
+                </mat-form-field>
+            
+                <div class="buttonpos2">
+                  <button mat-stroked-button color="warn" (click)="cancel()" type="cancel" class="btn btn-outline-danger">Cancel</button>&nbsp; &nbsp; &nbsp;
+                  <button mat-raised-button color="primary" type="primary" type="submit"  class="btn btn-outline-success" (click)="newAccount">Submit</button>
+              </div>
+            
+            </div>
+          </form>
+        </mat-tab> 
+
+      
+
+
+
+
+
+
+
+
+
+      
+
+
+
+</mat-tab-group>
+       
+    
+      
+
+

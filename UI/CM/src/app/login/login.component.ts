@@ -44,7 +44,7 @@ login(){
       //this.router.navigate(['admin'])
       if(msg == "success"){
         //this.router.navigate(['/admin'])
-        this.router.navigate(['admin'])
+        this.router.navigate(['/admin'])
         
       }
       else if(msg == "Not found")
@@ -58,7 +58,7 @@ login(){
       }
       
     })
-   
+    this.authService.login(this.loginForm.value);
   
   }  
   
@@ -74,5 +74,7 @@ validate(){
   else if(this.loginForm.value.userName!=="admin"){
   this.message="wrong user name"
   }
-}}
+
+}
+}
 

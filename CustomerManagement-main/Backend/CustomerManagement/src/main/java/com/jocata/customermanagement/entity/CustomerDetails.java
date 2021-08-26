@@ -16,8 +16,8 @@ public class CustomerDetails {
 	
 	//@SequenceGenerator(sequenceName = "cust_account_number", allocationSize = 1, name = "ACT_SEQ")
 	//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ACT_SEQ")
-	@Column(name = "account_number")
-	private Integer accountNumber;
+	@Column(name = "customer_cif_code")
+	private Integer cifNumber;
 
 	
 	@Id
@@ -48,7 +48,7 @@ public class CustomerDetails {
 	@Column(name = "aadhar")
 	private String aadharNumber;
 	@Column(name = "pan")
-	private String PanNumber;
+	private String panNumber;
 	@Column(name = "mobile_number")
 	private String customerMobileNumber;
 
@@ -60,12 +60,14 @@ public class CustomerDetails {
 		this.customerId = customerId;
 	}
 
-	public Integer getAccountNumber() {
-		return accountNumber;
+	
+
+	public Integer getCifNumber() {
+		return cifNumber;
 	}
 
-	public void setAccountNumber(Integer accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setCifNumber(Integer cifNumber) {
+		this.cifNumber = cifNumber;
 	}
 
 	public String getFirstName() {
@@ -92,14 +94,7 @@ public class CustomerDetails {
 		this.gender = gender;
 	}
 
-	public String getMartialStatus() {
-		return maritalStatus;
-	}
-
-	public void setMartialStatus(String martialStatus) {
-		this.maritalStatus = martialStatus;
-	}
-
+	
 	public String getFatherName() {
 		return fatherName;
 	}
@@ -140,12 +135,22 @@ public class CustomerDetails {
 		this.aadharNumber = aadharNumber;
 	}
 
+	
+
+	public String getMaritalStatus() {
+		return maritalStatus;
+	}
+
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+
 	public String getPanNumber() {
-		return PanNumber;
+		return panNumber;
 	}
 
 	public void setPanNumber(String panNumber) {
-		PanNumber = panNumber;
+		this.panNumber = panNumber;
 	}
 
 	public String getCustomerMobileNumber() {

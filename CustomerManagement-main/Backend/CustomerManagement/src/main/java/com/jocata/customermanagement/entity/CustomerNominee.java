@@ -16,16 +16,8 @@ public class CustomerNominee {
 	@Column(name = "customer_id")
 	private Integer customerId;
 
-	public String getAadharNumber() {
-		return aadharNumber;
-	}
-
-	public void setAadharNumber(String aadharNumber) {
-		this.aadharNumber = aadharNumber;
-	}
-
-	@Column(name = "aadhar")
-	private String aadharNumber;
+	@Column(name="cust_id")
+	private Integer custId;
 
 	@Column(name = "nominee_name")
 	private String nomineeName;
@@ -48,6 +40,16 @@ public class CustomerNominee {
 
 	public void setNomineeName(String nomineeName) {
 		this.nomineeName = nomineeName;
+	}
+	
+	
+
+	public Integer getCustId() {
+		return custId;
+	}
+
+	public void setCustId(Integer custId) {
+		this.custId = custId;
 	}
 
 	public String getRelationship() {

@@ -1,0 +1,156 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 20%;
+  margin-left:10px;
+  margin-right:50px;
+  margin-bottom: 19px;
+}
+
+
+.example-full-width2 {
+    width: 20%;
+    margin-left:14px;
+    margin-right:50px;
+  }
+
+  .example-full-width3 {
+    width: 20%;
+    margin-left:5px;
+    margin-right:50px;
+  }
+
+
+
+.example-full-width1 {
+    width: 44.3%;
+    margin-left:10px;
+    margin-right:50px;
+  }
+
+  .example-full-width5 {
+    width: 20%;
+    margin-left:7px;
+    margin-right:50px;
+  }
+
+
+td {
+  padding-right: 8px;
+}
+
+
+.text{
+  color:white;
+  margin-top:20px;
+}
+
+
+
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.tab{
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mat-elevation-z8{
+    background-color: rgb(128, 170, 204);
+    padding-bottom: 20px;
+}
+.state{
+    border: 20px;
+    margin:30px
+}
+.texter{
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:50px;
+    font-weight: bolder;
+
+}
+.menu{
+    margin-right: 1500px;
+    color: azure;
+    background-color: brown;
+}
+mat-input+span{
+    display:none;
+    color:red;
+}
+mat-input.ng-invalid+span{
+    display:inline;
+}
+.tabs{
+    padding-left: 30px;
+  
+    
+}
+
+ .rel {
+    position: relative;
+    height:300px;
+    width: 600px;
+}
+.buttonpos {
+    
+    padding-top: inherit;
+    padding-left: 870px;
+    left:0;
+    margin-right:50px;
+    padding-bottom: 10px;
+}
+
+.buttonpos1 {
+    
+  padding-top: inherit;
+  padding-left: 510px;
+  left:0;
+  margin-right:50px;
+  padding-bottom: 10px;
+}
+
+
+
+.buttonpos2 {
+    
+  padding-top: inherit;
+  padding-left: 1220px;
+  left:0;
+  margin-right:15px;
+  padding-bottom: 10px;
+}
+
+.buttonpos4 {
+    
+  padding-top: inherit;
+  padding-left: 850px;
+  left:0;
+  margin-right:15px;
+  padding-bottom: 10px;
+}
+
+
+.buttonpos5 {
+    
+  padding-top: inherit;
+  padding-left: 130px;
+  left:0;
+  margin-right:15px;
+  padding-bottom: 10px;
+}
+
+
+.homebutton{
+ margin-left: 1200px;
+ margin-top:20px;
+}
+
+.mat-elevation-z8{
+  background-color: rgb(128, 170, 204);
+  padding-bottom: 20px;
+}
+
+

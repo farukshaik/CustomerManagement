@@ -11,4 +11,8 @@ import com.jocata.customermanagement.entity.CustomerAddress;
 public interface CustomerAddressRepository extends JpaRepository<CustomerAddress, Integer> {
 
 	public List<CustomerAddress> findAll();
+	//public CustomerAddress findByAadharNumber(String aadharNumber);
+	
+	public CustomerAddress findByCustId(Integer custId);
 }
+

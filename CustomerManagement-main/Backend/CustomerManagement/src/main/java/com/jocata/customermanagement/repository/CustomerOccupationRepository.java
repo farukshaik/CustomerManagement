@@ -7,4 +7,6 @@ import com.jocata.customermanagement.entity.CustomerOccupation;
 
 @Repository
 public interface CustomerOccupationRepository extends JpaRepository<CustomerOccupation, Integer> {
+
+	public CustomerOccupation findByCustId(Integer custId);
 }
